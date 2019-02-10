@@ -63,6 +63,8 @@ def refresh_screen():
 
 
 while True:
+    for event in pygame.event.get():
+        pass
     logo.is_on_edge()
     logo.move()
     refresh_screen()
