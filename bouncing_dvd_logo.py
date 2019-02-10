@@ -5,6 +5,7 @@ pygame.init()
 pygame.mixer.init()
 
 clock = pygame.time.Clock()
+fps = 30
 
 screen = pygame.display.set_mode([800, 600])
 white = [255, 255, 255]
@@ -61,7 +62,7 @@ def refresh_screen():
         screen.fill(white)
         screen.blit(logo_image, (logo.x, logo.y))
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(fps)
 
 
 while True:
