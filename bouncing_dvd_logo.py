@@ -51,10 +51,6 @@ class Logo:
 logo = Logo(3)
 
 
-def move_logo():
-        logo.move()
-
-
 def refresh_screen():
         screen.fill(white)
         screen.blit(logo_image, (logo.x, logo.y))
