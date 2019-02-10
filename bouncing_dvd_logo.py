@@ -73,7 +73,8 @@ def refresh_screen():
 
 while True:
     for event in pygame.event.get():
-        pass
+        if event.type == pygame.KEYDOWN:
+            pygame.quit()
     logo.is_on_edge()
     logo.move()
     refresh_screen()
