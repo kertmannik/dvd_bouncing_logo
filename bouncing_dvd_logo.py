@@ -22,6 +22,9 @@ logo_image = pygame.transform.scale(logo_image, (158, 70))
 logo_width = logo_image.get_width()
 logo_height = logo_image.get_height()
 
+logo_movement_speed = 3
+
+
 class Logo:
         def __init__(self, speed):
                 self.x_speed = speed
@@ -53,7 +56,7 @@ class Logo:
                 random_background_color()
 
 
-logo = Logo(3)
+logo = Logo(logo_movement_speed)
 
 
 def random_background_color():
