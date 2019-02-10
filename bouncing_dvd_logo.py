@@ -29,29 +29,26 @@ class Logo:
                 self.y = randint(0, screen_width - logo_width)
 
         def move(self):
-                print(self.x)
-                print(self.y)
                 self.x = self.x + self.x_speed
                 self.y = self.y + self.y_speed
 
 
+        def is_on_edge(self):
+            if self.x + logo_width >= screen_width:
+                self.x_speed = -self.x_speed
+                self.x = screen_width - logo_width
+            elif self.x <= 0:
+                self.x_speed = -self.x_speed
+                self.x = 0
+
+            if self.y + logo_height >= screen_height:
+                self.y_speed = -self.y_speed
+                self.y = screen_height - logo_height
+            elif self.y <= 0:
+                self.y_speed = -self.y_speed
+                self.y = 0
+
 logo = Logo(3)
-
-
-def is_on_edge():
-        if logo.x + logo_width >= screen_width:
-                logo.x_speed = -logo.x_speed
-                logo.x = screen_width - logo_width
-        elif logo.x <= 0:
-                logo.x_speed = -logo.x_speed
-                logo.x = 0
-
-        if logo.y + logo_height >= screen_height:
-                logo.y_speed = -logo.y_speed
-                logo.y = screen_height - logo_height
-        elif logo.y <= 0:
-                logo.y_speed = -logo.y_speed
-                logo.y = 0
 
 
 def move_logo():
@@ -66,6 +63,6 @@ def refresh_screen():
 
 
 while True:
-        is_on_edge()
-        move_logo()
-        refresh_screen()
+    logo.is_on_edge()
+    logo.move()
+    refresh_screen()
