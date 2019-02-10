@@ -7,7 +7,7 @@ pygame.mixer.init()
 clock = pygame.time.Clock()
 fps = 30
 
-screen = pygame.display.set_mode([800, 600])
+screen = pygame.display.set_mode([800, 600], pygame.FULLSCREEN)
 white = [255, 255, 255]
 screen_color = white
 screen.fill(screen_color)
