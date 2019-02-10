@@ -14,10 +14,10 @@ screen.fill(screen_color)
 screen_width = screen.get_width()
 screen_height = screen.get_height()
 
-pygame.display.set_caption('DVD Bouncing Logo!')
+pygame.display.set_caption('Bouncing DVD Logo!')
 
 logo_image = pygame.image.load("dvd_logo.png")
-logo_image = pygame.transform.scale(logo_image, (104, 104))
+logo_image = pygame.transform.scale(logo_image, (158, 70))
 
 logo_width = logo_image.get_width()
 logo_height = logo_image.get_height()
